@@ -1,20 +1,57 @@
-function mostrarInformacion() 
+document.addEventListener("DOMContentLoaded",function()
 {
-    // Obtener los valores de los inputs
-    const nombre = document.getElementById("nombre").value.trim();
-    const apellido = document.getElementById("apellido").value.trim();
+document.getElementById("mi_boton").addEventListener("click", function()
+{
+mostrar_mensaje();
+});
+});
+document.getElementById("btn_color").addEventListener("click", function()
+{
+cambiar_color();
+});
 
-    // Validar que los campos no estén vacíos
-    if (!nombre || !apellido)
-    {
-        alert("Por favor, completa ambos campos.");
-        return;
+function mostrar_mensaje() {
+    //Declaracion de variable
+    var datouno;
+    var datodos;
+    //Asignacion de id a las variables
+
+    datouno = document.getElementById("imput1").value;
+    datodos = document.getElementById("imput2").value;
+
+    var mensaje = "Los datos son " + datouno + " " + datodos;
+     //Llamar mensaje
+
+    
+
+    if (datouno.trim() === ''|| datodos.trim() === '')
+        alert("Por favor llene sus datos");
+
+    else {        
+        document.getElementById("resultado").innerText = mensaje;
     }
+}
+function cambiar_color(){
+    var elemento = document.getElementById("contenedor");    
+   
 
-    // Mostrar el mensaje en una ventana emergente
-    alert("Hola " + nombre + " " + apellido + ". ¡Gracias por enviar tus datos!");
 
-    // Limpiar los campos de entrada
-    document.getElementById("nombre").value = "";
-    document.getElementById("apellido").value = "";
+    if (document.body.style.backgroundColor === "black"){
+        document.body.style.backgroundColor = "white";
+        elemento.style.position="absolute";
+        elemento.style.width="200px";
+        elemento.style.height="200px";
+        elemento.style.backgroundColor="blue";
+    }
+        
+    else{
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white"
+        elemento.style.position="absolute";
+        elemento.style.width="150px";
+        elemento.style.height="150px";
+        elemento.style.backgroundColor="red";
+    }
+        
+    
 }
