@@ -1,0 +1,55 @@
+body 
+{
+   
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+  }
+
+.contenedor
+{
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupa toda la pantalla */
+    margin: 0;
+    padding: 220px 50px 20px 150px;
+}
+
+h3
+{
+    font-family: monospace;
+
+}
+
+#resultado
+{
+    color: blue; /* Cambia "blue" por cualquier color que desees */
+}
+
+h3:first-of-type {
+    color: blue; /* Cambia el color del texto del primer <h3>, que es "Ingrese su Nombre" */
+  }
+  
+  h3:nth-of-type(2) {
+    color: blue; /* Cambia el color del texto del segundo <h3>, que es "Ingrese su Apellido" */
+  }
+
+
+
+input
+{
+    border-radius: 10px;
+    border:solid 2px blue;
+    background-color: white;
+
+}
+
+
+
+button
+{
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: skyblue;
+}
