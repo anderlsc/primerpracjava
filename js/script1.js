@@ -34,5 +34,31 @@ function mostrar_mensaje()
         document.getElementById("resultado").innerText = mensaje;
     }
 }
+function cambiar_color()
+{
+    var elemento = document.getElementById("contenedor");    
+   
 
 
+    if (document.body.style.backgroundColor === "black")
+        {
+        document.body.style.backgroundColor = "white";
+        elemento.style.position="absolute";
+        elemento.style.width="150px";
+        elemento.style.height="150px";
+        elemento.style.backgroundColor="blue";
+    }
+        
+    else
+    {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white"
+        elemento.style.position="absolute";
+        elemento.style.width="150px";
+        elemento.style.height="150px";
+        elemento.style.backgroundColor="red";
+     
+    }
+        
+    
+}
